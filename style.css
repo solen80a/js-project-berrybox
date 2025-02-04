@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: grey;
+  color: white;
+  text-align: center;
+}
+
+header {
+  background-color: pink;
+
+}
+
+h2 {
+  font-weight: 100;
+}
+
+.logo {
+  width: 100px;
+}
+
+main {
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.berry {
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.berry-logo {
+  width: 100px;
+}
+
+.berry p {
+  color: black;
+}
+
+button {
+  width: 50px;
+  border-radius: 20px;
+  border-color: blue;
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px) {
+  body {
+    background: red;
+  }
+
+}
+
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px) {
+  body {
+    background: blue;
+  }
+
+
+}
+
+/* Desktop */
+@media (min-width: 769px) and (max-width: 1600px) {
+  body {
+    background: green;
+  }
+
+
+}
+
+
+footer {
+  background-color: blueviolet;
+}
