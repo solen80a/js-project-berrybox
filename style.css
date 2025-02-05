@@ -3,6 +3,11 @@ body {
   background: grey;
   color: white;
   text-align: center;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 header {
@@ -23,28 +28,51 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2%;
+
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 2px;
+}
+
+p {
+  color: black;
 }
 
 .berry {
   background-color: brown;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2px;
+  padding: 20px;
+  border: 2px solid black;
+
 }
 
-.berry-logo {
-  width: 100px;
+.berry h3 {
+  grid-column: span 5;
+  grid-row: 1;
 }
 
 .berry p {
-  color: black;
+  grid-column: span 5;
+  grid-row: 2;
+
+}
+
+.berry-img {
+  width: 100%;
+  grid-row: 3;
+  grid-column: span 5;
 }
 
 button {
-  width: 50px;
+  width: 100%;
   border-radius: 20px;
   border-color: blue;
+  grid-column: 2/4;
+  grid-row: 5;
+
 }
 
 /* Mobile */
@@ -62,6 +90,42 @@ button {
   }
 
 
+  article {
+    display: grid;
+    grid-template-columns: repeat(8, 2fr);
+    gap: 2px;
+  }
+
+
+  .berry h3 {
+    grid-column: span 9;
+    grid-row: 1;
+  }
+
+
+  .berry p {
+    grid-column: span 9;
+    grid-row: 2;
+
+  }
+
+
+  .berry-img {
+    width: 300px;
+    grid-row: 3;
+    grid-column: span 9;
+  }
+
+
+  button {
+    width: 100%;
+    border-radius: 20px;
+    border-color: blue;
+    grid-column: 3/7;
+    grid-row: 5;
+
+  }
+
 }
 
 /* Desktop */
@@ -70,10 +134,64 @@ button {
     background: green;
   }
 
+  main {
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  main p {
+    flex-direction: column;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr);
+    gap: 2px;
+  }
+
+  .berry h3 {
+    grid-column: span 13;
+    grid-row: 1;
+  }
+
+
+  .berry p {
+    grid-column: span 13;
+    grid-row: 2;
+
+  }
+
+
+  .berry-img {
+    width: 300px;
+    grid-row: 3;
+    grid-column: span 13;
+  }
+
+
+  button {
+    width: 100%;
+    border-radius: 20px;
+    border-color: blue;
+    grid-column: 4/10;
+    grid-row: 5;
+
+  }
+
+
+
+
 
 }
 
 
+
+
 footer {
   background-color: blueviolet;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  padding: 10px;
 }
