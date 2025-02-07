@@ -1,6 +1,4 @@
-/*colors https://coolors.co/dabfae-0e100b-3f4e3d-6a7a5c*/
-
-
+/*Body as a Flex parent setting parameters for the children header, main and footer.*/
 body {
   font-family: akzidenz-grotesk, Open Sans, ui-sans-serif, system-ui;
   font-size: x-large;
@@ -14,6 +12,7 @@ body {
   gap: 10px;
 }
 
+/*Header is a child to body and a Flex parent to the headers and image.*/
 header {
   background-color: #3F4E3D;
   flex: 1;
@@ -22,20 +21,8 @@ header {
   align-items: center;
 }
 
-
-h1 {
-  /*text-shadow: 2px 2px black;*/
-
-}
-
 h2 {
   font-weight: 100;
-  flex: 1;
-}
-
-.hamburger {
-  width: 3%;
-  padding: 10px;
   flex: 1;
 }
 
@@ -45,6 +32,7 @@ h2 {
   flex: 1;
 }
 
+/*Main is a Flex parent to child article, positioning the articles.*/
 main {
   /*font-size: large;*/
   display: flex;
@@ -53,7 +41,7 @@ main {
   gap: 10px;
 }
 
-
+/*Article is a Flex child to main and a CSS grid with column and multiple rows, positioning the parameters inside like header, paragraf, image and button.*/
 article {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -94,7 +82,7 @@ button {
   font-size: large;
 }
 
-
+/*Footer is Flex parent positioning the child navigation, including nav and image links.*/
 footer {
   background-color: #3F4E3D;
   gap: 20px;
@@ -104,7 +92,7 @@ footer {
   justify-content: center;
 }
 
-
+/*Responsive for mobile, tablet, desktop and widescreen. Changing the Flex direction from column for mobile to row for tablet, desktop and widescreen.*/
 /* Mobile */
 @media only screen and (max-width: 500px) {
   .navigation {
@@ -144,7 +132,6 @@ footer {
 
   .berry-img {
     width: 300px;
-
   }
 
   button {
@@ -152,8 +139,6 @@ footer {
   }
 
 }
-
-
 
 /* Desktop */
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -170,13 +155,6 @@ footer {
     width: 100%;
     /*font-size: x-large;*/
   }
-
-  /*Parent to img, h3, p and button in the article*/
-  /*Child to main*/
-  /* article {
-    gap: 2px;
-  }
-*/
 
   .berry-img {
     width: 300px;
@@ -198,12 +176,6 @@ footer {
   .content {
     width: 100%;
   }
-
-  /*Parent to img, h3, p and button in the article*/
-  /*Child to main*/
-  /*article {
-    gap: 2px;
-  }*/
 
   .berry-img {
     width: 300px;
