@@ -12,25 +12,48 @@ body {
   gap: 10px;
 }
 
-/*Header is a child to body and a Flex parent to the headers and image.*/
+/*Header is a child to body and a CSS grid parent to the headers, image and hamburger menu.*/
 header {
   background-color: #3F4E3D;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+h1 {
+  grid-column: span 4;
+  grid-row: 1/2;
 }
 
 h2 {
   font-weight: 100;
-  flex: 1;
+  /* flex: 1; */
+  grid-column: span 4;
 }
 
 .headerlogo {
   width: 98%;
   border: solid #3F4E3D;
-  flex: 1;
+  /* flex: 1; */
+  grid-column: span 4;
 }
+
+.hamburger-menu {
+  /* display: flex; */
+  grid-column: 1/2;
+
+}
+
+.selection {
+  display: none;
+}
+
+
 
 /*Main is a Flex parent to child article, positioning the articles.*/
 main {
@@ -82,7 +105,7 @@ button {
   font-size: large;
 }
 
-/*Footer is Flex parent positioning the child navigation, including nav and image links.*/
+/*Footer is Flex parent positioning navigation, facebook and instagram image and links.*/
 footer {
   background-color: #3F4E3D;
   gap: 20px;
@@ -93,9 +116,12 @@ footer {
 }
 
 /*Responsive for mobile, tablet, desktop and widescreen. Changing the Flex direction from column for mobile to row for tablet, desktop and widescreen.*/
+
 /* Mobile */
 @media only screen and (max-width: 500px) {
-  .navigation {
+
+  /*Hiding .nav home, about and contact for mobile*/
+  .nav {
     display: none;
   }
 
