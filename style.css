@@ -105,6 +105,19 @@ button {
   font-size: large;
 }
 
+.order-form {
+  background-color: #6A7A5C;
+  padding: 2px;
+  border: 2px solid #3F4E3D;
+  display: flex;
+  flex-direction: column;
+
+}
+
+output {
+  display: inline;
+}
+
 /*Footer is Flex parent positioning navigation, facebook and instagram image and links.*/
 footer {
   background-color: #3F4E3D;
