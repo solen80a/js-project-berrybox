@@ -51,15 +51,16 @@
 
     <!--Articles in CSS Grid-->
     <article class="berry strawberry">
+
       <img
         class="berry-img"
         src="./images/kid2.jpg"
       />
       <h3>Strawberry</h3>
       <p>Price 145kr/kg</p>
-      <button>Buy a box</button>
+      <a href=#order-form><button>Buy a box</button></a>
     </article>
-    </article>
+
     <article class="berry raspberry">
       <img
         class="berry-img"
@@ -67,9 +68,9 @@
       />
       <h3>Raspberry</h3>
       <p>Price 195kr/kg</p>
-      <button>Buy a box</button>
+      <a href=#order-form><button>Buy a box</button></a>
     </article>
-    </article>
+
     <article class="berry blueberry">
       <img
         class="berry-img"
@@ -77,14 +78,16 @@
       />
       <h3>Blueberry</h3>
       <p>Price 195kr/kg</p>
-      <button>Buy a box</button>
+      <a href=#order-form><button>Buy a box</button><a>
     </article>
+
   </main>
 
   <!-- HTML form to order. -->
 
   <form
     class="order-form"
+    id="order-form"
     action="http://httpbin.org/anything"
     method="POST"
   >
@@ -94,6 +97,7 @@
       <input
         type="text"
         name="name"
+        placeholder="Anna Andersson"
         required
       ></input>
     </label>
@@ -102,6 +106,8 @@
       <input
         type="email"
         name="email"
+        placeholder="anna@mail.com"
+        required
       ></input>
     </label>
     <label>
@@ -109,26 +115,20 @@
       <input
         type="tel"
         name="phone-number"
+        placeholder="0701112233"
+        required
       ></input>
     </label>
+
+
     <label>
-      <span>Pick your own berries</span>
-      <input
-        type="radio"
-        id="method"
-        name="delivery-method-pick"
-        value="method"
-      ></input>
-    </label>
-    <label>
-      <span>Pick up a box at the farm</span>
-      <input
-        type="radio"
-        id="method"
-        name="delivery-method-pickup"
-        value="method"
-      ></input>
-    </label>
+      <span>Meet us at the farm and </span>
+      <select name="selection">
+        <option value="select">"make your selection"</option>
+        <option value="pick">pick your own berries</option>
+        <option value="pickup">pick up a box</option>
+      </select></label>
+
     <label>
       <span>Pick a date</span>
       <input
