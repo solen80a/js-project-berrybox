@@ -28,8 +28,8 @@
         src="./images/hamburger2.png"
         alt="hamburgermenu"
       />
-      <p class="hamburger selection">selection 1</p>
-      <p class="hamburger selection">selection 2</p>
+      <!-- <p class="hamburger selection">selection 1</p>
+      <p class="hamburger selection">selection 2</p> -->
     </div>
     <!-- <img
       class="headerlogo"
@@ -56,105 +56,105 @@
 
     </div>
 
+    <section class="berry-articles">
+      <article class="berry strawberry">
 
-    <!--Articles in CSS Grid-->
-    <article class="berry strawberry">
+        <img
+          class="berry-img"
+          src="./images/kid2.webp"
+        />
+        <h3>Strawberry</h3>
+        <p>Price 145kr/kg</p>
+        <a href=#order-form><button>Buy a box</button></a>
+      </article>
 
-      <img
-        class="berry-img"
-        src="./images/kid2.jpg"
-      />
-      <h3>Strawberry</h3>
-      <p>Price 145kr/kg</p>
-      <a href=#order-form><button>Buy a box</button></a>
-    </article>
+      <article class="berry raspberry">
+        <img
+          class="berry-img"
+          src="./images/raspberry.webp"
+        />
+        <h3>Raspberry</h3>
+        <p>Price 195kr/kg</p>
+        <a href=#order-form><button>Buy a box</button></a>
+      </article>
 
-    <article class="berry raspberry">
-      <img
-        class="berry-img"
-        src="./images/raspberry.jpg"
-      />
-      <h3>Raspberry</h3>
-      <p>Price 195kr/kg</p>
-      <a href=#order-form><button>Buy a box</button></a>
-    </article>
+      <article class="berry blueberry">
+        <img
+          class="berry-img"
+          src="./images/blueberry.webp"
+        />
+        <h3>Blueberry</h3>
+        <p>Price 195kr/kg</p>
+        <a href=#order-form><button>Buy a box</button><a>
+      </article>
+    </section>
 
-    <article class="berry blueberry">
-      <img
-        class="berry-img"
-        src="./images/blueberry.jpg"
-      />
-      <h3>Blueberry</h3>
-      <p>Price 195kr/kg</p>
-      <a href=#order-form><button>Buy a box</button><a>
-    </article>
+    <section section-order-form>
+      <form
+        class="order-form"
+        id="order-form"
+        action="http://httpbin.org/anything"
+        method="POST"
+      >
 
-
-    <form
-      class="order-form"
-      id="order-form"
-      action="http://httpbin.org/anything"
-      method="POST"
-    >
-
-      <label>
-        <span>Name</span>
-        <input
-          type="text"
-          name="name"
-          placeholder="Anna Andersson"
-          required
-        ></input>
-      </label>
-      <label>
-        <span>Email</span>
-        <input
-          type="email"
-          name="email"
-          placeholder="anna@mail.com"
-          required
-        ></input>
-      </label>
-      <label>
-        <span>Phone</span>
-        <input
-          type="tel"
-          name="phone-number"
-          placeholder="070-111 22 33"
-          required
-        ></input>
-      </label>
+        <label>
+          <span>Name</span>
+          <input
+            type="text"
+            name="name"
+            placeholder="Anna Andersson"
+            required
+          ></input>
+        </label>
+        <label>
+          <span>Email</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="anna@mail.com"
+            required
+          ></input>
+        </label>
+        <label>
+          <span>Phone</span>
+          <input
+            type="tel"
+            name="phone-number"
+            placeholder="070-111 22 33"
+            required
+          ></input>
+        </label>
 
 
-      <label>
-        <span>Meet us at the farm and </span>
-        <select name="selection">
-          <option
-            class="default-text"
-            value="select"
-          >-- make your selection --</option>
-          <option value="pick">pick your own berries</option>
-          <option value="pickup">pick up a box of berries</option>
-        </select></label>
+        <label>
+          <span>Meet us at the farm and </span>
+          <select name="selection">
+            <option
+              class="default-text"
+              value="select"
+            >-- make your selection --</option>
+            <option value="pick">pick your own berries</option>
+            <option value="pickup">pick up a box of berries</option>
+          </select></label>
 
-      <label>
-        <span>Pick a date</span>
-        <input
-          type="date"
-          name="date"
-        ></input>
-      </label>
-      <label>
-        <span>How many?</span>
-        <input
-          type="number"
-          name="amount"
-          value="1"
-        ></input>
-      </label>
-      <button type="submit">Summery 195kr</button>
-    </form>
-
+        <label>
+          <span>Pick a date</span>
+          <input
+            type="date"
+            name="date"
+          ></input>
+        </label>
+        <label>
+          <span>How many?</span>
+          <input
+            type="number"
+            name="amount"
+            value="1"
+          ></input>
+        </label>
+        <button type="submit">Summery 195kr</button>
+      </form>
+    </section>
 
   </main>
 

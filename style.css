@@ -16,14 +16,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* text-align: start; */
+  align-items: center;
   gap: 10px;
 }
 
 /*Header is a child to body and a CSS grid parent to the headers, image and hamburger menu.*/
 header {
-  /* background-color: #3F4E3D; */
   background-image: url(./images/berryfield.jpg);
   height: 50vh;
   background-size: cover;
@@ -64,30 +62,35 @@ h2 {
   align-self: flex-start;
 }
 
-.selection {
+.selection .header-text {
   display: none;
 }
 
 /*Main is a Flex parent to child article, positioning the articles.*/
 main {
-  /*font-size: large;*/
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   text-align: center;
-  gap: 5px;
-  margin: 10px;
+  margin: 0 auto;
+  padding: 10px;
+
 }
 
+.berry-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
 
+}
 
 /*Article is a Flex child to main and a CSS grid with column and multiple rows, positioning the parameters inside like header, paragraf, image and button.*/
 article {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   border-radius: 4px;
-
+  margin: 0 auto;
+  /* padding: 2px; */
 }
 
 p {
@@ -96,6 +99,8 @@ p {
 }
 
 .berry {
+  display: flex;
+  flex-direction: column;
   background-color: #6A7A5C;
   padding: 2px;
   border: 2px solid #3F4E3D;
@@ -118,9 +123,7 @@ p {
 button {
   width: 100%;
   background-color: #DABFAE;
-  /* border: none; */
   appearance: none;
-  /* padding: 10px 20px; */
   padding: 5px;
   border-radius: 4px;
   cursor: pointer;
@@ -136,8 +139,9 @@ button {
   flex-direction: column;
   border-radius: 4px;
   padding: 2px;
-  max-width: 75vw;
+  max-width: 100%;
   margin: 0 auto;
+
 }
 
 output {
@@ -146,37 +150,26 @@ output {
 
 label {
   display: flex;
-  /* border-bottom: 2px solid #3F4E3D; */
   font-size: 16px;
   padding: 5px;
 }
-
-/* label:last-child {
-  border-bottom: none;
-  align-items: center;
-} */
 
 span {
   width: 30%;
   text-align: right;
   margin-right: 15px;
-  /* flex-shrink: 0; */
 
 }
 
 input {
   width: 100%;
   font-size: 15px;
-  /* padding-top: 5px;
-  padding-bottom: 10px; */
   border: none;
-  /* outline: none; */
   border-radius: 4px;
 }
 
 select {
   width: 100%;
-  margin: 0;
   margin: 10px 10px 10px 0;
   border-radius: 4px;
   /* appearance: none;
@@ -185,15 +178,12 @@ select {
   /* border: none; */
   font-size: 15px;
   color: black;
-  /* outline: none; */
 }
 
 .default-text {
   color: #DABFAE;
   font-style: italic;
 }
-
-
 
 /*css placeholder css tricks*/
 ::-webkit-input-placeholder {
@@ -244,15 +234,12 @@ footer {
 
 /* Tablet */
 @media (min-width: 501px) and (max-width: 768px) {
-  main {
+
+  .berry-articles {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  article:last-child {
-    align-self: flex-end;
   }
 
   .content {
@@ -284,28 +271,25 @@ footer {
     font-size: large;
   }
 
-
+  .order-form {
+    max-width: 75%;
+    padding: 2px;
+  }
 
 }
 
 /* Desktop */
 @media (min-width: 769px) and (max-width: 1200px) {
 
-  /*Parent to .content and article .berry*/
-  main {
+  /*Parent to article .berry*/
+  .berry-articles {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
   }
 
-
-
-  article:last-child {
-    align-self: flex-end;
-  }
-
-  /*Child to main*/
+  /*Child to berry-articles*/
   .content {
     width: 100%;
     /*font-size: x-large;*/
@@ -315,25 +299,22 @@ footer {
     width: 300px;
   }
 
-
+  .order-form {
+    max-width: 75%;
+    padding: 2px;
+  }
 
 }
 
 /* wideScreen */
 @media (min-width: 1201px) {
 
-  /*Parent to .content and article .berry*/
-  main {
+  /*Parent to article .berry*/
+  .berry-articles {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-
-
-  article:last-child {
-    align-self: flex-end;
   }
 
   /*Child to main*/
@@ -345,10 +326,8 @@ footer {
     width: 300px;
   }
 
-  section {
-    display: flex;
-    flex-direction: column;
+  .order-form {
+    max-width: 75%;
+    padding: 2px;
   }
-
-
 }
