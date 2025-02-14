@@ -19,7 +19,7 @@
   <!--Header with buisiness name and plot, image of the fields-->
   <header>
     <section class=header-text>
-      <h1>Berry Box</h1>
+      <h1>Welcome to Berry Box Farm!</h1>
       <h2>Meet us at the farm</h2>
     </section>
     <div class="hamburger-menu">
@@ -44,8 +44,16 @@
   <!--Main including content describing the buisiness, articles displaying the product for sale (devided into seperate classes)-->
   <main>
     <div class=content>
-      <p>Pick your own berries or buy a box for pick-up.</p>
-      <p>Make your selection from our lovely farm.</p>
+      <p>
+        At Berry Box Farm, we take pride in growing the juiciest, freshest berries, picked with love and care. Our farm
+        is a place where nature and family come together, offering a rich variety of strawberries, blueberries and
+        raspberries.</p>
+      <p>We believe in sustainable farming, using eco-friendly practices to nurture our land and produce berries
+        bursting with flavor. Whether you're here for a farm tour, a berry-picking adventure, or just to enjoy the
+        beautiful scenery, we welcome you to experience the sweetness of farm-fresh berries.</p>
+      <p>
+        Come taste the difference at Berry Box Farm—where every berry is grown with love!</p>
+
     </div>
 
 
@@ -81,71 +89,78 @@
       <a href=#order-form><button>Buy a box</button><a>
     </article>
 
+
+    <form
+      class="order-form"
+      id="order-form"
+      action="http://httpbin.org/anything"
+      method="POST"
+    >
+
+      <label>
+        <span>Name</span>
+        <input
+          type="text"
+          name="name"
+          placeholder="Anna Andersson"
+          required
+        ></input>
+      </label>
+      <label>
+        <span>Email</span>
+        <input
+          type="email"
+          name="email"
+          placeholder="anna@mail.com"
+          required
+        ></input>
+      </label>
+      <label>
+        <span>Phone</span>
+        <input
+          type="tel"
+          name="phone-number"
+          placeholder="070-111 22 33"
+          required
+        ></input>
+      </label>
+
+
+      <label>
+        <span>Meet us at the farm and </span>
+        <select name="selection">
+          <option
+            class="default-text"
+            value="select"
+          >-- make your selection --</option>
+          <option value="pick">pick your own berries</option>
+          <option value="pickup">pick up a box of berries</option>
+        </select></label>
+
+      <label>
+        <span>Pick a date</span>
+        <input
+          type="date"
+          name="date"
+        ></input>
+      </label>
+      <label>
+        <span>How many?</span>
+        <input
+          type="number"
+          name="amount"
+          value="1"
+        ></input>
+      </label>
+      <button type="submit">Summery 195kr</button>
+    </form>
+
+
   </main>
 
   <!-- HTML form to order. -->
 
-  <form
-    class="order-form"
-    id="order-form"
-    action="http://httpbin.org/anything"
-    method="POST"
-  >
 
-    <label>
-      <span>Name</span>
-      <input
-        type="text"
-        name="name"
-        placeholder="Anna Andersson"
-        required
-      ></input>
-    </label>
-    <label>
-      <span>Email</span>
-      <input
-        type="email"
-        name="email"
-        placeholder="anna@mail.com"
-        required
-      ></input>
-    </label>
-    <label>
-      <span>Phone</span>
-      <input
-        type="tel"
-        name="phone-number"
-        placeholder="0701112233"
-        required
-      ></input>
-    </label>
-
-
-    <label>
-      <span>Meet us at the farm and </span>
-      <select name="selection">
-        <option value="select">"make your selection"</option>
-        <option value="pick">pick your own berries</option>
-        <option value="pickup">pick up a box</option>
-      </select></label>
-
-    <label>
-      <span>Pick a date</span>
-      <input
-        type="date"
-        name="date"
-      ></input>
-    </label>
-    <label>
-      <span>How many?</span>
-      <input
-        type="number"
-        name="amount"
-        value="0"
-      ></input>
-    </label>
-    <button type="submit">Summery 195kr</button>
-  </form>
 
   <!--Footer including a navigation bar and icons/links to facebook and instagram-->
   <!--Navigation bar in Flexbox-->
