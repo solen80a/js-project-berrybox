@@ -4,5 +4,5 @@ Colors
 https://coolors.co/dabfae-0e100b-3f4e3d-6a7a5c
 
 Netlify link
-https://dulcet-starlight-cfc2dc.netlify.app/
+https://berrybox.netlify.app/
 

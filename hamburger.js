@@ -14,3 +14,4 @@ offScreenMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
   hamMenu.classList.toggle("active");
 });
+
