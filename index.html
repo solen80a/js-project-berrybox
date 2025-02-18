@@ -16,28 +16,54 @@
 
 <body>
 
+
   <!--Header with buisiness name and plot, image of the fields-->
   <header>
     <section class=header-text>
-      <h1>Welcome to Berry Box Farm!</h1>
+      <h1>Berry Box</h1>
       <h2>Meet us at the farm</h2>
     </section>
     <div
-      id="hamburger-menu"
-      class="hamburger-menu"
+      id="hamburger-menu-closed"
+      class="hamburger-menu-closed"
     >
       <img
-        class="hamburger image"
-        src="./images/hamburger2.png"
-        alt="hamburgermenu"
+        id="hamburger-image"
+        class="hamburger-image"
+        src="./images/hamburger_filled.png"
+        alt="hamburger-image"
       />
-      <!-- <p class="hamburger selection">selection 1</p>
-      <p class="hamburger selection">selection 2</p> -->
     </div>
-    <!-- <img
-      class="headerlogo"
-      src="./images/berryfield.jpg"
-      alt="berryfield" -->
+    <div
+      id="hamburger-menu-open"
+      class="hamburger-menu-open"
+    >
+      <img
+        id="strawberry-image"
+        class="strawberry-image"
+        src="./images/strawberry_filled.png"
+        alt="strawberry-image"
+      />
+      <section class="hamburger-section">
+        <p
+          id=home
+          class="hamburger-section-selection"
+        >Home</p>
+        <p
+          id=about
+          class="hamburger-section-selection"
+        >About the farm</p>
+        <p
+          id=buy
+          class="hamburger-section-selection"
+        >Buy a box</p>
+        <p
+          id=contact
+          class="hamburger-section-selection"
+        >Contact</p>
+      </section>
+    </div>
+
     />
 
 
@@ -223,6 +249,8 @@
     </div>
 
   </footer>
+
+  <script src="dom.js"></script>
 
 </body>
 
