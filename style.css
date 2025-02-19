@@ -83,7 +83,7 @@ h2 {
   position: relative;
 }
 
-.hamburger-menu-closed span {
+/* .hamburger-menu-closed span {
   height: 5px;
   width: 100%;
   background-color: black;
@@ -93,7 +93,7 @@ h2 {
   top: 50%;
   transform: translate(-50%, -50%);
   transition: .3s ease;
-}
+} */
 
 /* .hamburger-menu-closed span:nth-child(1) {
   top: 25%;
@@ -201,17 +201,7 @@ p {
   width: 100%;
 }
 
-button {
-  width: 100%;
-  background-color: #DABFAE;
-  appearance: none;
-  padding: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+
 
 .order-form {
   background-color: #6A7A5C;
@@ -287,6 +277,31 @@ select {
   /* Firefox 18- */
   color: #DABFAE;
   font-style: italic;
+}
+
+button {
+  width: 100%;
+  background-color: #DABFAE;
+  appearance: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.contact {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: #6A7A5C;
+  border: 2px solid #3F4E3D;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.contact h3 {
+  font-size: 30px;
 }
 
 /*Footer is Flex parent positioning navigation, facebook and instagram image and links.*/

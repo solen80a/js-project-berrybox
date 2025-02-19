@@ -19,7 +19,10 @@
 
   <!--Header with buisiness name and plot, image of the fields-->
   <header>
-    <section class=header-text>
+    <section
+      id="header-text"
+      class="header-text"
+    >
       <h1>Berry Box</h1>
       <h2>Meet us at the farm</h2>
       <div
@@ -34,7 +37,6 @@
         >
       </div>
 
-
       <div
         id="hamburger-menu-open"
         class="hamburger-menu-open"
@@ -46,22 +48,30 @@
           alt="strawberry-image"
         />
         <section class="hamburger-section">
-          <p
-            id=home
-            class="hamburger-section-selection"
-          >Home</p>
-          <p
-            id=about
-            class="hamburger-section-selection"
-          >About the farm</p>
-          <p
-            id=buy
-            class="hamburger-section-selection"
-          >Buy a box</p>
-          <p
-            id=contact
-            class="hamburger-section-selection"
-          >Contact</p>
+          <a href="#header-text">
+            <p
+              id="home"
+              class="hamburger-section-selection"
+            >Home</p>
+          </a>
+          <a href="#main-text-content">
+            <p
+              id="hamburger-section-selection-about"
+              class="hamburger-section-selection"
+            >About the farm</p>
+          </a>
+          <a href="#berry-articles">
+            <p
+              id="hamburger-section-selection-buy"
+              class="hamburger-section-selection"
+            >Buy a box</p>
+          </a>
+          <a href="#contact">
+            <p
+              id="hamburger-section-selection-contact"
+              class="hamburger-section-selection"
+            >Contact</p>
+          </a>
         </section>
       </div>
     </section>
@@ -69,7 +79,10 @@
 
   <!--Main including content describing the buisiness, articles displaying the product for sale (devided into seperate classes)-->
   <main>
-    <div class=main-text-content>
+    <div
+      id="main-text-content"
+      class="main-text-content"
+    >
       <p>
         At Berry Box Farm, we take pride in growing the juiciest, freshest berries, picked with love and care. Our farm
         is a place where nature and family come together, offering a rich variety of strawberries, blueberries and
@@ -82,7 +95,10 @@
 
     </div>
 
-    <section class="berry-articles">
+    <section
+      id="berry-articles"
+      class="berry-articles"
+    >
       <article class="berry strawberry">
 
         <img
@@ -111,7 +127,7 @@
         />
         <h3>Blueberry</h3>
         <p>Price 195kr/kg</p>
-        <a href=#order-form><button>Buy a box</button><a>
+        <a href=#order-form> <button>Buy a box</button><a>
       </article>
     </section>
 
@@ -203,6 +219,16 @@
       </form>
     </section>
 
+    <section
+      id="contact"
+      class="contact"
+    >
+      <h3>Contact</h3>
+      <p>Berry Box Farm</p>
+      <p>Road of berries 753</p>
+      <p>Harvest Valley, WV 26789</p>
+    </section>
+
   </main>
 
   <!-- HTML form to order. -->
@@ -236,13 +262,24 @@
     </div>
 
     <div class="nav one">
-      <p>Home</p>
+      <a href="#header-text">
+        <p>Home</p>
+      </a>
     </div>
     <div class="nav two">
-      <p>About the farm</p>
+      <a href="#main-text-content">
+        <p>About the farm</p>
+      </a>
     </div>
     <div class="nav three">
-      <p>Contact</p>
+      <a href="#berry-articles">
+        <p>Buy a box</p>
+      </a>
+    </div>
+    <div class="nav four">
+      <a href="#contact">
+        <p>Contact</p>
+      </a>
     </div>
 
   </footer>
