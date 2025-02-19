@@ -17,7 +17,7 @@
 <body>
 
 
-  <!--Header with buisiness name and plot, image of the fields-->
+  <!--Header with buisiness name and plot, hero image, hamburger navigation bar that toggles on click (mobile/tablet) or show (desktop/widescreen). -->
   <header>
     <section
       id="header-text"
@@ -25,6 +25,8 @@
     >
       <h1>Berry Box</h1>
       <h2>Meet us at the farm</h2>
+
+      <!-- hamburger navigation bar toggles on click with different icons (mobile/tablet) or show (desktop/widescreen) -->
       <div
         id="hamburger-menu-closed"
         class="hamburger-menu-closed"
@@ -36,7 +38,7 @@
           alt="hamburger-image"
         >
       </div>
-
+      <!-- Open when you click hambuger icon or show on desktop/widescreen -->
       <div
         id="hamburger-menu-open"
         class="hamburger-menu-open"
@@ -77,7 +79,7 @@
     </section>
   </header>
 
-  <!--Main including content describing the buisiness, articles displaying the product for sale (devided into seperate classes)-->
+  <!--Main including content describing the buisiness, articles displaying the product for sale (devided into seperate classes), form for order and a contact card.-->
   <main>
     <div
       id="main-text-content"
@@ -133,30 +135,12 @@
 
     <section class="section-order-form">
 
-      <div class="hero-container">
-
-        <video
-          autoplay
-          loop
-          muted
-          playinline
-          class="hero-video"
-        >
-          <source
-            src="./Video/Berry_Close-up.mp4"
-            type="video/mp4"
-          > Sorry, your browser does not support the video tag!
-        </video>
-      </div>
-
-
       <form
         class="order-form"
         id="order-form"
         action="http://httpbin.org/anything"
         method="POST"
       >
-
         <label>
           <span>Name</span>
           <input
@@ -184,8 +168,6 @@
             required
           ></input>
         </label>
-
-
         <label>
           <span>Meet us at the farm and </span>
           <select name="selection">
@@ -196,7 +178,6 @@
             <option value="pick">pick your own berries</option>
             <option value="pickup">pick up a box of berries</option>
           </select></label>
-
         <label>
           <span>Pick a date</span>
           <input
@@ -217,28 +198,22 @@
           type="submit"
         >Summery 195kr</button>
       </form>
-    </section>
 
-    <section
-      id="contact"
-      class="contact"
-    >
-      <h3>Contact</h3>
-      <p>Berry Box Farm</p>
-      <p>Road of berries 753</p>
-      <p>Harvest Valley, WV 26789</p>
+      <section
+        id="contact"
+        class="contact"
+      >
+        <h3>Welcome to the farm</h3>
+        <p>Berry Box Farm</p>
+        <p>Road of berries 753</p>
+        <p>Harvest Valley, WV 26789</p>
+        <p>Phone: +46 75 555 44 33</p>
+      </section>
     </section>
-
   </main>
 
-  <!-- HTML form to order. -->
-
-
-
   <!--Footer including a navigation bar and icons/links to facebook and instagram-->
-  <!--Navigation bar in Flexbox-->
   <footer class="navigation">
-
     <div class="instagram-img">
       <a
         href="https://www.instagram.com/"
@@ -249,7 +224,6 @@
           alt="instagram link"
         ></a>
     </div>
-
     <div class="facebook-img">
       <a
         href="https://www.facebook.com/"
@@ -260,7 +234,6 @@
           alt="facebook icon"
         ></a>
     </div>
-
     <div class="nav one">
       <a href="#header-text">
         <p>Home</p>
@@ -281,7 +254,6 @@
         <p>Contact</p>
       </a>
     </div>
-
   </footer>
 
   <script src="hamburger.js"></script>

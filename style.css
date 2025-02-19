@@ -21,6 +21,10 @@ body {
   gap: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Header is a child to body and a CSS grid parent to the headers, image and hamburger menu.*/
 header {
   background-image: url(./images/berryfield.jpg);
@@ -173,6 +177,12 @@ p {
 }
 
 
+.section-order-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
 
 .order-form {
   background-color: #6A7A5C;
@@ -262,13 +272,15 @@ button {
   margin-top: 20px;
 }
 
+
 .contact {
   /* display: flex;
   flex-direction: column; */
   background-color: #6A7A5C;
   border: 2px solid #3F4E3D;
   border-radius: 4px;
-  margin-top: 4px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .contact h3 {
@@ -333,11 +345,12 @@ footer p {
   }
 
   .section-order-form {
+    flex: 1;
     padding: 20px;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
-
+    gap: 20px;
   }
 
   .order-form {
@@ -345,8 +358,9 @@ footer p {
     padding: 2px;
   }
 
-  .hero-container {
-    display: none;
+  .contact {
+    margin-top: 0px;
+    width: 50%;
   }
 
 }
@@ -418,60 +432,26 @@ footer p {
   }
 
   .section-order-form {
+    flex: 1;
     padding: 20px;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
     gap: 20px;
   }
 
-  .hero-container {
-    position: relative;
-    height: 50vh;
-    overflow: hidden;
-    flex: 1;
-
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* .hero-container {
-    position: relative;
-    height: 50vh;
-    overflow: hidden;
-    width: 100%;
-
-
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-
-  .hero-video {
-    /* position: absolute;
-    z-index: -1;
-    height: 70vh; */
-
-    position: relative;
-    height: 20vh;
-
-    flex: 1;
-
-    /* width: 100%; */
-
-    border: 2px solid #3F4E3D;
-    border-radius: 4px;
-  }
-
   .order-form {
-    /* max-width: 25%; */
+    max-width: 50%;
     justify-content: center;
     align-items: center;
     padding: 10px;
     width: 50%;
     flex: 1;
+  }
+
+  .contact {
+    margin-top: 0px;
+    width: 50%;
   }
 
   label {
@@ -546,40 +526,25 @@ footer p {
 
   .section-order-form {
     padding: 20px;
-    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
-
-  }
-
-  .hero-container {
-    position: relative;
-    height: 50vh;
-    overflow: hidden;
-
-
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-video {
-    /* position: absolute; */
-    /* z-index: -1; */
-    position: relative;
-    height: 35vh;
-    /* overflow: hidden; */
-    width: 100%;
-
-
-    border: 2px solid #3F4E3D;
-    border-radius: 4px;
+    gap: 20px;
   }
 
   .order-form {
-    /* max-width: 25%; */
+    max-width: 50%;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    width: 50%;
+    flex: 1;
+  }
+
+  .contact {
+    margin-top: 0px;
     width: 50%;
   }
 
@@ -589,6 +554,5 @@ footer p {
 
   .form-button {
     width: 75%;
-
   }
 }
