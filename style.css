@@ -10,7 +10,7 @@ html {
 /*Body as a Flex parent setting parameters for the children header, main and footer.*/
 body {
   font-family: akzidenz-grotesk, Open Sans, ui-sans-serif, system-ui;
-  font-size: 15px;
+  /* font-size: 10px; */
   background: #DABFAE;
   color: #DABFAE;
   padding: 2px;
@@ -159,7 +159,7 @@ p {
 }
 
 .section-order-form {
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   flex-direction: column;
 }
@@ -172,7 +172,8 @@ p {
   border-radius: 4px;
   padding: 2px;
   max-width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  min-width: 150px;
 }
 
 output {
@@ -186,27 +187,36 @@ label {
 }
 
 span {
+  flex: 1;
   width: 100%;  
   text-align: center;
   margin-right: 15px;
 }
 
 input {
+  flex: 1;
   width: 100%;
   border: none;
   border-radius: 4px;
+  font-size: 10px;
+  min-width: 130px; 
 }
 
-select {
+.order-form-selection {
+  flex: 1;
   width: 100%;
-  margin: 10px 10px 10px 0;
+  margin: 10px 0px 10px 0;
   border-radius: 4px; 
   color: black;
+  font-size: 10px;
+  min-width: 130px;
+  height: 50px; 
 }
 
-.default-text {
-  color: #DABFAE;
-  font-style: italic;
+.order-form-selection { 
+  flex: 1;
+  font-style: italic;  
+  text-align: center; 
 }
 
 /*css placeholder css tricks*/
@@ -274,7 +284,8 @@ footer p {
   color: #DABFAE;
 }
 
-/*Responsive for mobile, tablet, desktop and widescreen. Changing the Flex direction from column for mobile to row for tablet, desktop and widescreen.*/
+/*Responsive for mobile, tablet, desktop and widescreen. 
+Changing the Flex direction from column for mobile to row for tablet, desktop and widescreen.*/
 
 /* Mobile */
 @media only screen and (max-width: 500px) {
@@ -318,16 +329,28 @@ footer p {
     justify-content: center;
     align-content: center;
     gap: 20px;
+    
   }
 
-  .order-form {
-    max-width: 75%;
-    padding: 2px;
+  .order-form {    
+    padding: 2px;    
+  }
+
+  label{
+    align-items: center;
+  }
+
+  input{  
+   width: 50%;
+  }
+
+  .order-form-selection{    
+    width: 50%;
   }
 
   .contact {
-    margin-top: 0px;
-    width: 50%;
+    margin-top: 0px;  
+    width: 50%; 
   }
 
 }
@@ -345,7 +368,6 @@ footer p {
 
   .hamburger-menu-closed {
     display: none;
-
   }
 
   .hamburger-menu-open {
@@ -379,8 +401,7 @@ footer p {
 
   /*Child to berry-articles*/
   .main-text-content {
-    width: 100%;
-    /*font-size: x-large;*/
+    width: 100%;    
   }
 
   .berry-img {
@@ -409,6 +430,16 @@ footer p {
     flex: 1;
   }
 
+  input{
+    font-size: 15px;
+    width: 50%;
+  }
+
+  .order-form-selection{
+    font-size: 15px;
+    width: 50%;
+  }
+
   .contact {
     margin-top: 0px;
     width: 50%;
@@ -417,8 +448,6 @@ footer p {
   label {
     width: 70%;
   }
-
-  span {}
 
   .form-button {
     width: 75%;
@@ -438,7 +467,6 @@ footer p {
 
   .hamburger-menu-closed {
     display: none;
-
   }
 
   .hamburger-menu-open {
@@ -500,6 +528,14 @@ footer p {
     padding: 10px;
     width: 50%;
     flex: 1;
+  }
+
+  input{
+    font-size: 15px;
+  }
+
+  .order-form-selection{
+    font-size: 15px;
   }
 
   .contact {
