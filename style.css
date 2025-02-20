@@ -1,4 +1,4 @@
-/*Makes the scroll from the article buttons to the form smooth*/
+/*Makes the scroll from the article buttons to the form and the link to the navigation smooth*/
 html {
   scroll-behavior: smooth;
 }
@@ -21,11 +21,13 @@ body {
   gap: 10px;
 }
 
+/* Removes the underline for all links */
 a {
   text-decoration: none;
 }
 
-/*Header is a child to body and a CSS grid parent to the headers, image and hamburger menu.*/
+/*Header is a child to body and a Flexbox parent to the headers, image and hamburger menu. 
+Contains a hero image, hamburger menu that opens and colaps on click.*/
 header {
   background-image: url(./images/berryfield.jpg);
   height: 50vh;
@@ -46,12 +48,13 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
+  text-align: center;
   width: 75%;
   border: 2px solid #3F4E3D;
   background-color: #6A7A5C;
   padding: 10px;
   margin: 5px;
+  border-radius: 4px;
 }
 
 h1 {
@@ -67,6 +70,10 @@ h2 {
 
 .hamburger-section p {
   color: #DABFAE;
+  border: 2px solid #3F4E3D;
+  padding: 2px;
+  border-radius: 4px;
+  min-width: 110px;
 }
 
 .hamburger-menu-closed {

@@ -1,17 +1,16 @@
 //Open and close hamburger menu
-const hamMenu = document.querySelector(".hamburger-menu-closed");
-
-const offScreenMenu = document.querySelector(".hamburger-menu-open");
+const hamburgerMenuClosed = document.querySelector(".hamburger-menu-closed");
+const hamburgerMenuOpen = document.querySelector(".hamburger-menu-open");
 
 //Open hamburger menu
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  offScreenMenu.classList.toggle("active");
+hamburgerMenuClosed.addEventListener("click", () => {
+  hamburgerMenuClosed.classList.toggle("active");
+  hamburgerMenuOpen.classList.toggle("active");
 });
 
-//Open hamburger menu
-offScreenMenu.addEventListener("click", () => {
-  offScreenMenu.classList.toggle("active");
-  hamMenu.classList.toggle("active");
+//Close hamburger menu
+hamburgerMenuOpen.addEventListener("click", () => {
+  hamburgerMenuOpen.classList.toggle("active");
+  hamburgerMenuClosed.classList.toggle("active");
 });
 
