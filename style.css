@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-/*Header is a child to body and a Flexbox parent to the headers, image and hamburger menu. 
+/*Header is a child to body and a Flexbox parent to the headers, image and hamburger menu.
 Contains a hero image, hamburger menu that opens and colaps on click.*/
 header {
   background-image: url(./images/berryfield.jpg);
@@ -87,7 +87,7 @@ h2 {
 }
 
 .hamburger-menu-open {
-  background-color: #6A7A5C;  
+  background-color: #6A7A5C;
   height: 100vh;
   width: 100%;
   max-width: 768px;
@@ -108,13 +108,13 @@ h2 {
 }
 
 
-/*Main is a Flex parent to child article, positioning the articles.*/
 main {
   text-align: center;
   margin: 0 auto;
   padding: 10px;
 }
 
+/*.berry-articles is a Flex parent to child article, positioning the articles.*/
 .berry-articles {
   display: flex;
   flex-direction: column;
@@ -124,12 +124,12 @@ main {
   max-width: 100%;
 }
 
-/*Article is a Flex child to main and a CSS grid with column and multiple rows, positioning the parameters inside like header, paragraf, image and button.*/
+/*Article is a Flex child to .berry-articles and a CSS grid with column and multiple rows, positioning the parameters inside like header, paragraf, image and button.*/
 article {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   border-radius: 4px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 p {
@@ -159,7 +159,6 @@ p {
 }
 
 .section-order-form {
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
 }
@@ -172,7 +171,6 @@ p {
   border-radius: 4px;
   padding: 2px;
   max-width: 100%;
-  /* margin: 0 auto; */
   min-width: 150px;
 }
 
@@ -188,7 +186,7 @@ label {
 
 span {
   flex: 1;
-  width: 100%;  
+  width: 100%;
   text-align: center;
   margin-right: 15px;
 }
@@ -199,24 +197,24 @@ input {
   border: none;
   border-radius: 4px;
   font-size: 10px;
-  min-width: 130px; 
+  min-width: 130px;
 }
 
 .order-form-selection {
   flex: 1;
   width: 100%;
   margin: 10px 0px 10px 0;
-  border-radius: 4px; 
+  border-radius: 4px;
   color: black;
   font-size: 10px;
   min-width: 130px;
-  height: 50px; 
+  height: 50px;
 }
 
-.order-form-selection { 
+.order-form-selection {
   flex: 1;
-  font-style: italic;  
-  text-align: center; 
+  font-style: italic;
+  text-align: center;
 }
 
 /*css placeholder css tricks*/
@@ -257,7 +255,7 @@ button {
 }
 
 
-.contact {  
+.contact {
   background-color: #6A7A5C;
   border: 2px solid #3F4E3D;
   border-radius: 4px;
@@ -284,7 +282,7 @@ footer p {
   color: #DABFAE;
 }
 
-/*Responsive for mobile, tablet, desktop and widescreen. 
+/*Responsive for mobile, tablet, desktop and widescreen.
 Changing the Flex direction from column for mobile to row for tablet, desktop and widescreen.*/
 
 /* Mobile */
@@ -329,28 +327,28 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
     justify-content: center;
     align-content: center;
     gap: 20px;
-    
+
   }
 
-  .order-form {    
-    padding: 2px;    
+  .order-form {
+    padding: 2px;
   }
 
   label{
     align-items: center;
   }
 
-  input{  
+  input{
    width: 50%;
   }
 
-  .order-form-selection{    
+  .order-form-selection{
     width: 50%;
   }
 
   .contact {
-    margin-top: 0px;  
-    width: 50%; 
+    margin-top: 0px;
+    width: 50%;
   }
 
 }
@@ -401,7 +399,7 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
 
   /*Child to berry-articles*/
   .main-text-content {
-    width: 100%;    
+    width: 100%;
   }
 
   .berry-img {
@@ -422,36 +420,32 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
   }
 
   .order-form {
-    max-width: 50%;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 50%;
+    align-items: center;   
     flex: 1;
   }
 
+  label {
+    width: 100%;
+  }
+
   input{
-    font-size: 15px;
-    width: 50%;
+    font-size: 15px;    
   }
 
   .order-form-selection{
-    font-size: 15px;
-    width: 50%;
+    font-size: 15px;  
+  }
+
+  .form-button {
+    width: 75%;
   }
 
   .contact {
     margin-top: 0px;
     width: 50%;
   }
-
-  label {
-    width: 70%;
-  }
-
-  .form-button {
-    width: 75%;
-  }
+ 
 }
 
 /* wideScreen */
