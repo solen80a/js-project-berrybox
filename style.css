@@ -124,7 +124,8 @@ main {
   max-width: 100%;
 }
 
-/*Article is a Flex child to .berry-articles and a CSS grid with column and multiple rows, positioning the parameters inside like header, paragraf, image and button.*/
+/*Article is a Flex child to .berry-articles and a CSS grid with column and multiple rows, positioning the parameters inside like header, 
+paragraf, image and button.*/
 article {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
