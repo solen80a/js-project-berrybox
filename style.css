@@ -9,8 +9,7 @@ html {
 
 /*Body as a Flex parent setting parameters for the children header, main and footer.*/
 body {
-  font-family: akzidenz-grotesk, Open Sans, ui-sans-serif, system-ui;
-  /* font-size: 10px; */
+  font-family: akzidenz-grotesk, Open Sans, ui-sans-serif, system-ui; 
   background: #DABFAE;
   color: #DABFAE;
   padding: 2px;
@@ -126,12 +125,12 @@ main {
 
 /*Article is a Flex child to .berry-articles and a CSS grid with column and multiple rows, positioning the parameters inside like header, 
 paragraf, image and button.*/
-article {
-  display: grid;
+/*article {
+  display: grid; articles are overridden by class .berry the same!!
   grid-template-columns: repeat(1, 1fr);
   border-radius: 4px;
   margin: 0 auto;
-}
+}*/
 
 p {
   color: black;
@@ -139,12 +138,13 @@ p {
 }
 
 .berry {
-  display: flex;
+  display: flex; /*overrides articles the same!!*/
   flex-direction: column;
   background-color: #6A7A5C;
   padding: 2px;
   border: 2px solid #3F4E3D;
-
+  border-radius: 4px;
+  margin: 0 auto;
 }
 
 .berry h3 {
@@ -268,19 +268,32 @@ button {
   font-size: 30px;
 }
 
-/*Footer is Flex parent positioning navigation, facebook and instagram image and links.*/
-footer {
+/*CHANGE!!!!! Footer is Flex parent positioning navigation, facebook and instagram image and links.*/
+.footer-navigation {
+  display: grid;
+  grid-template-columns: 4, 1fr;
+  /* grid-template-rows: repeat(2, 1fr); */
   background-color: #3F4E3D;
   gap: 20px;
   padding: 10px;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   justify-content: center;
   width: 100%;
 }
 
-footer p {
+.footer-navigation p {
   color: #DABFAE;
+}
+
+.instagram-img{
+  grid-column: 1 / 2;
+  /* grid-row: span 2 ; */
+}
+
+.facebook-img{
+  grid-column: 2 / 3;
+  /* grid-row: span 2 ;   */
 }
 
 /*Responsive for mobile, tablet, desktop and widescreen.
@@ -290,7 +303,7 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
 @media only screen and (max-width: 500px) {
 
   /*Hiding .nav home, about and contact for mobile*/
-  .nav {
+  .footer-nav {
     display: none;
   }
 
@@ -350,6 +363,40 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
   .contact {
     margin-top: 0px;
     width: 50%;
+  }
+
+  .footer-navigation{
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .instagram-img{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+  }
+  
+  .facebook-img{
+    grid-column: 1 / 2;
+    grid-row: 2 / 2 ; 
+  }
+
+  .footer-nav.one{
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;    
+  }
+
+  .footer-nav.two{
+    grid-column: 4 / 3;   
+    grid-row: 1 / 2;    
+  }
+
+  .footer-nav.three{
+    grid-column: 2 / 3; 
+    grid-row: 2 / 3;      
+  }
+
+  .footer-nav.four{
+    grid-column: 3 / 4; 
+    grid-row: 2 / 3;     
   }
 
 }
@@ -445,6 +492,41 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
   .contact {
     margin-top: 0px;
     width: 50%;
+  }
+
+  
+  .footer-navigation{
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .instagram-img{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+  }
+  
+  .facebook-img{
+    grid-column: 1 / 2;
+    grid-row: 2 / 2 ; 
+  }
+
+  .footer-nav.one{
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;    
+  }
+
+  .footer-nav.two{
+    grid-column: 4 / 3;   
+    grid-row: 1 / 2;    
+  }
+
+  .footer-nav.three{
+    grid-column: 2 / 3; 
+    grid-row: 2 / 3;      
+  }
+
+  .footer-nav.four{
+    grid-column: 3 / 4; 
+    grid-row: 2 / 3;     
   }
  
 }
