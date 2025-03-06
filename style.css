@@ -268,11 +268,10 @@ button {
   font-size: 30px;
 }
 
-/*CHANGE!!!!! Footer is Flex parent positioning navigation, facebook and instagram image and links.*/
+/*Footer is CSS Grid parent positioning navigation, facebook and instagram image and links.*/
 .footer-navigation {
   display: grid;
-  grid-template-columns: 4, 1fr;
-  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(4, 1fr);  
   background-color: #3F4E3D;
   gap: 20px;
   padding: 10px;
@@ -287,13 +286,11 @@ button {
 }
 
 .instagram-img{
-  grid-column: 1 / 2;
-  /* grid-row: span 2 ; */
+  grid-column: 1 / 2;  
 }
 
 .facebook-img{
   grid-column: 2 / 3;
-  /* grid-row: span 2 ;   */
 }
 
 /*Responsive for mobile, tablet, desktop and widescreen.
@@ -370,33 +367,27 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
   }
 
   .instagram-img{
-    grid-column: 1 / 2;
-    grid-row: 1 / 2 ;
+    grid-column: 2 / 3;   
   }
   
   .facebook-img{
-    grid-column: 1 / 2;
-    grid-row: 2 / 2 ; 
+    grid-column: 3 / 4;    
   }
 
   .footer-nav.one{
-    grid-column: 2 / 3; 
-    grid-row: 1 / 2;    
+    grid-column: 4 / 5;        
   }
 
   .footer-nav.two{
-    grid-column: 4 / 3;   
-    grid-row: 1 / 2;    
+    grid-column: 5 / 6;          
   }
 
   .footer-nav.three{
-    grid-column: 2 / 3; 
-    grid-row: 2 / 3;      
+    grid-column: 6 / 7;          
   }
 
   .footer-nav.four{
-    grid-column: 3 / 4; 
-    grid-row: 2 / 3;     
+    grid-column: 7 / 8;          
   }
 
 }
@@ -500,33 +491,27 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
   }
 
   .instagram-img{
-    grid-column: 1 / 2;
-    grid-row: 1 / 2 ;
+    grid-column: 4 / 5;   
   }
   
   .facebook-img{
-    grid-column: 1 / 2;
-    grid-row: 2 / 2 ; 
+    grid-column: 5 / 6;    
   }
 
   .footer-nav.one{
-    grid-column: 2 / 3; 
-    grid-row: 1 / 2;    
+    grid-column: 6 / 7;        
   }
 
   .footer-nav.two{
-    grid-column: 4 / 3;   
-    grid-row: 1 / 2;    
+    grid-column: 7 / 8;          
   }
 
   .footer-nav.three{
-    grid-column: 2 / 3; 
-    grid-row: 2 / 3;      
+    grid-column: 8 / 9;          
   }
 
   .footer-nav.four{
-    grid-column: 3 / 4; 
-    grid-row: 2 / 3;     
+    grid-column: 9 / 10;          
   }
  
 }
@@ -627,4 +612,33 @@ Changing the Flex direction from column for mobile to row for tablet, desktop an
   .form-button {
     width: 75%;
   }
+
+  .footer-navigation{
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .instagram-img{
+    grid-column: 4 / 5;   
+  }
+  
+  .facebook-img{
+    grid-column: 5 / 6;    
+  }
+
+  .footer-nav.one{
+    grid-column: 6 / 7;        
+  }
+
+  .footer-nav.two{
+    grid-column: 7 / 8;          
+  }
+
+  .footer-nav.three{
+    grid-column: 8 / 9;          
+  }
+
+  .footer-nav.four{
+    grid-column: 9 / 10;          
+  }
+ 
 }
